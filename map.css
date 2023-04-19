@@ -1,0 +1,61 @@
+/*
+ *   CSS Styles for specific to MAP page
+ */
+
+#map-with-sidebar {
+	display: flex;
+	flex-direction: row;
+   height: 90%;
+}
+
+#map {
+  flex: 1;
+  height: 500px;
+  z-index: 1;
+}
+
+#sidebar {
+	min-width: 170px;
+	background-color: #ddd;
+  	background: linear-gradient(#eee, #ccc);
+}
+
+.sidebar-link {
+  padding: 10px 8px 10px 16px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  background: linear-gradient(#eee, #ccc);
+}
+
+.sidebar-link:hover {
+  color: #fff;
+  background: #080;      /* For old browsers that don't support gradients */
+  background: linear-gradient(#0a0, #060);
+  cursor: pointer;
+}
+
+.sidebar-link:before {
+  content: url(leaflet/images/marker-icon-small.png);
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+#map-reset-link {
+  padding: 10px 8px 10px 6px;
+  text-decoration: none;
+  color: #888;
+  display: block;
+}
+
+#map-reset-link:hover {
+  color: #fff;
+  background: #ffd;
+  background: linear-gradient(#0a0, #060);
+  cursor: pointer;
+}
+
+
+.leaflet-popup-content {
+  text-align: center;    /* Center the text in the leaflet popup windows */
+}

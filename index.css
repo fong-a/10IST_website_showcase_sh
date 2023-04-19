@@ -1,0 +1,62 @@
+#welcome{
+    max-width: 1000px;
+    margin:auto
+}
+
+#welcome h1 {
+    color:green;    
+}
+
+#logo {
+    width: 200PX;
+    object-fit: cover;
+    float: right;
+    
+}
+
+#grid-links {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+	 padding: 10px;
+	 gap: 20px;
+}
+
+.grid-cell {
+    text-align: center;;
+	 border: 1px solid #888;
+	 box-shadow: 5px 5px 10px #888;
+}
+
+.grid-cell a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.grid-cell:hover{
+    box-shadow: 0px 0px 20px #000;
+}
+
+.cell-description{
+    padding: 5px;
+}
+
+.cell-title{
+    color: var(--highlight_bg);
+    font-weight: bold;
+}
+
+.grid-cell img {
+    width:100%;
+
+}
+
+/*
+ * Customisations for smaller screens
+ */
+@media only screen and (max-width: 900px) {
+  #grid-links {
+    grid-template-columns: auto auto;
+  }
+}
+

@@ -1,0 +1,44 @@
+
+
+main img {
+    width: 50%;
+	 box-shadow: 5px 5px 10px #888;
+	 padding: 10px;
+	 border: 1px solid #ccc;
+}
+
+main p {
+  padding: 5px;
+}
+
+
+
+#sam-img{
+    float: right;
+	 margin: 10px;
+}
+
+#history {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*
+ * chatGPT Train Animation
+ */
+ #train-container {
+    position: relative;
+    /*bottom: 118px;*/
+    left: -200px;
+    width: 200px;
+  }
+
+  #train {
+    position: relative;
+    width: 200px;
+    height: 60px;
+  }
+
+

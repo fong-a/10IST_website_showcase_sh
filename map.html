@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> NSW Heritage Railways</title>
+  <link rel="stylesheet" href="leaflet/leaflet.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="map.css"/>
+  <script src="leaflet/leaflet.js"></script>
+  <script src="map.js"></script>
+
+  <script>
+	  var locations = {
+		  'NSW-RM':  {name: 'NSW Rail Museam', url: 'nswRailMuseum.html', lat: -34.206235, long: 150.569719},
+		  'EVELEIGH':  {name: 'Eveleigh Workshop', url: 'evelighWorkshop.html', lat: -33.895698, long: 151.192988},
+		  'ZIGZAG':  {name: 'Zig Zag Railway', url: 'ZigZagRailway.html', lat: -33.477443, long: 150.220785},
+		  'PICNIC':  {name: 'Picnic Train', url: 'PicnicTrain.html', lat: -32.676825, long: 151.339509},
+	  };
+
+	  window.onload = function() {
+			init_map("map", -33.528231, 150.909183, 8);
+
+			for (id in locations) {
+	          add_map_pin(locations[id]);
+	  		  add_sidebar_link(id, 'sidebar-links');
+			}
+
+			// Check URL for a specific location to dispay
+			var params = new URLSearchParams(window.location.search);
+			if (params.has("location")) {
+				var location_id = params.get("location");
+				show_location(location_id);
+			}
+	  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <img src="logo.svg">
+    <span id="page-title">NSW Heritage Railways</span>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Locations</a>
+        <ul class="dropdown-content">
+          <li><a href="nswRailMuseum.html">NSW Rail Museum</a></li>
+          <li><a href="evelighWorkshop.html">Eveleigh Workshop</a></li>
+          <li><a href="ZigZagRailway.html">Zig Zag Railway</a></li>
+          <li><a href="PicnicTrain.html">Picnic Train</a></li>
+        </ul>
+      </li>
+			<li><a href="map.html">Map</a></li>
+			<li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+		<div>
+      <h1>Map </h1>
+      <p>The map below show NSW rail heritage centers, operations and museums. Click on the markers to find out more informtion. Please note this is not all rail heritage centres in NSW, only the most prominent examples that bring up the most interest.</p>
+	  <p>Each of the locations are listed down the right side of the page for quick navigation</p>
+		</div>
+
+		<div id="map-with-sidebar">
+			<div id="sidebar">
+				<div id="sidebar-links"></div>
+				<a id="map-reset-link" onclick="reset_map_view()">Reset View</a>
+			</div>
+		  <div id="map"></div>
+	  <div>	
+
+  </main>
+  <footer>
+    &copy; 2023 NSW Heritage Railways - Sam Hildebrandt
+  </footer>
+</body>
+</html>

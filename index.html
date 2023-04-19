@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NSW Heritage Railways</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="slideshow.css" />
+  <script src="slideshow.js"></script>
+
+	<script>
+		window.onload = function() {
+      show_slide(1);
+      setInterval(next_slide, 10000); // Change slide every 10 seconds
+		}
+	</script>
+</head>
+
+<body>
+  <header>
+    <img src="logo.svg">
+    <span id="page-title">NSW Heritage Railways</span>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Locations</a>
+        <ul class="dropdown-content">
+          <li><a href="nswRailMuseum.html">NSW Rail Museum</a></li>
+          <li><a href="evelighWorkshop.html">Eveleigh Workshop</a></li>
+          <li><a href="ZigZagRailway.html">Zig Zag Railway</a></li>
+          <li><a href="PicnicTrain.html">Picnic Train</a></li>
+        </ul>
+      </li>
+			<li><a href="map.html">Map</a></li>
+			<li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="slideshow-container">
+      <div class="slide">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/slide1_thirlmere.jpg" style="width:100%">
+        <div class="text">NSW Rail Museum</div>
+      </div>
+
+      <div class="slide">
+        <div class="numbertext">2 / 4</div>
+        <img src="images/slide2_eveleigh.jpg" style="width:100%">
+        <div class="text">Eveleigh Workshop</div>
+      </div>
+
+      <div class="slide">
+        <div class="numbertext">3 / 4</div>
+        <img src="images/slide3_zigzag.jpg" style="width:100%">
+        <div class="text">Zig Zag Railway</div>
+      </div>
+
+      <div class="slide">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/slide4_picnictrain.jpg" style="width:100%">
+        <div class="text">Picnic Train</div>
+      </div>
+
+      <a class="prev" onclick="prev_slide()">&#10094;</a>
+      <a class="next" onclick="next_slide()">&#10095;</a>
+	  </div>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="show_slide(1)"></span>
+			<span class="dot" onclick="show_slide(2)"></span>
+			<span class="dot" onclick="show_slide(3)"></span>
+			<span class="dot" onclick="show_slide(4)"></span>
+    </div>
+
+    <div id="welcome">
+      <img id="logo" src="logo.svg">
+      <h1>Welcome to NSW Heritage Railways</h1>
+      <p>NSW Heritage Railways is a website dedicated to the preservation of the rich
+         railway history of NSW. This website explores a number of locations around the state that
+          are dedicated to the preservation and operation of railway history relects. Each historic site can be located 
+          via the interactive map page, so be sure to check them out.
+      </p>
+      <div style="clear:both;"></div>
+
+
+      <h1>Locations</h1>
+      <p>
+        Below are some prominent locations of NSW Heritage Railways.  Click on the images below to find out more about each site.
+      </p>
+    </div>
+    </div>
+
+    <div id="grid-links">
+      <div class="grid-cell">
+        <a href="nswRailMuseum.html">
+          <img src="images/thrilmire.jpg">
+          <div class="cell-title">NSW Rail Museum</div>
+          <div class="cell-description">Home of all Railway heritage in NSW</div>
+        </a>
+      </div>
+
+      <div class="grid-cell">
+        <a href="evelighWorkshop.html">
+          <img src="images/Eveleigh_Workshops_2.jpg">
+          <div class="cell-title">Eveleigh Workshop</div>
+          <div class="cell-description">Made in the 1800s, still sereves as a heritage maintence facility</div>
+        </a>
+      </div>
+
+      <div class="grid-cell">
+        <a href="ZigZagRailway.html">
+          <img src="images/zig zag.jpg">
+          <div class="cell-title">Zig Zag Railway</div>
+          <div class="cell-description">A unique railway line now operating on a different guage</div>
+        </a>
+      </div>
+
+      <div class="grid-cell">
+        <a href="PicnicTrain.html">
+          <img src="images/picnic train 1.jpg">
+          <div class="cell-title">Picnic Train</div>
+          <div class="cell-description">New leading heritage Railway operators</div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2023 NSW Heritage Railways - Sam Hildebrandt
+  </footer>
+</body>
+</html>
